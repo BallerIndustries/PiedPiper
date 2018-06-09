@@ -1,7 +1,3 @@
-//
-// Created by Angus Cheng on 10/6/2018.
-//
-
 #include <eosiolib/eosio.hpp>
 #include <eosiolib/print.hpp>
 
@@ -11,6 +7,9 @@ public:
             :eosio::contract(self),
              companies(_self, _self)
     {}
+
+
+    //cleos push action hackathon create '["hackathon", 1, "Angus", "email", "finance"]' -p hackathon
 
     /// @abi action
     void create(account_name author,
@@ -25,11 +24,11 @@ public:
             new_company.industry = industry;
         });
 
-        eosio::print("company#", id, " created");
+        eosio::print("company#", id, " created  ");
     }
 
 private:
-    /// @abi table company i64
+    /// @abi table companies i64
     struct company {
         uint64_t id;
         std::string name;

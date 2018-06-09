@@ -8,11 +8,10 @@ const eos = Eos({
 
 describe('Todo Smoke Tests', () => {
     let contract = null;
-    let options = null;
+    let options = {authorization: 'serg'};
 
     beforeEach(async() => {
         contract = await eos.contract('todo');
-        options = {authorization: 'serg'};
     });
 
     it('should be able to CREATE a todo', async() => {
@@ -53,6 +52,7 @@ describe('Todo Smoke Tests', () => {
     it('should be able to READ all todo', async() => {
         const result = await eos.getTableRows(true, 'todo', 'todo', 'todos');
         expect(result.rows).to.be.an('array');
+        expect(result.rows.length).to.be.gt(0);
     });
 
     async function createTodo() {
