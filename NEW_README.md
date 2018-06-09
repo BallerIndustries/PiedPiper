@@ -1,5 +1,12 @@
 default wallet password: PW5JnHFdSymgWr7dGGq32zSJNuD1uXEARXExN4JdGh1ao1YTsTbfA
 
+Unlock Wallet
+--------------------
+cleos wallet open
+cleos wallet unlock --password PW5JnHFdSymgWr7dGGq32zSJNuD1uXEARXExN4JdGh1ao1YTsTbfA
+
+Keys
+--------------------
 1 Private key: 5JqoT7tEwVG8M1joTE97dBjQ8ZSy1XvbA6CKVtRAvN1hfVMQQJX
 1 Public key: EOS58mtKbUVRPPnoDzmMDS9PXiWryeeWmJVxAbL82LERJRU8yeb3C
 
