@@ -10,12 +10,12 @@ describe('Todo Smoke Tests', () => {
     let contract = null;
     let options = null;
 
-    beforeEach(async () => {
+    beforeEach(async() => {
         contract = await eos.contract('todo');
         options = {authorization: 'serg'};
     });
 
-    it('should be able to CREATE a todo', async () => {
+    it('should be able to CREATE a todo', async() => {
         const result = await createTodo();
         expect(result.response).to.exist;
     });
@@ -39,8 +39,18 @@ describe('Todo Smoke Tests', () => {
         expect(response).to.exist;
     });
 
-    // TODO: Look at GITHUB code to figure out how the dude did it. https://github.com/eosasia/eos-todo/
-    it('should be able to READ a todo', async() => {
+    xit('should be able to CREATE and RETRIEVE a todo by ID', async() => {
+        // CREATE
+        const result = await createTodo();
+        const todoId = result.todoId.toString();
+
+        // RETRIEVE
+        const todo = await eos.getTableRows(true, 'todo', 'todo', 'todos', todoId);
+        expect(todo).to.be.an('object');
+        expect(todo.rows).to.not.exist;
+    });
+
+    it('should be able to READ all todo', async() => {
         const result = await eos.getTableRows(true, 'todo', 'todo', 'todos');
         expect(result.rows).to.be.an('array');
     });
