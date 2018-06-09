@@ -1,7 +1,6 @@
 const Eos = require('eosjs');
 const expect = require('chai').expect;
 
-
 const eos = Eos({
     keyProvider: ['5HrjhATTaw7dsYT6j7Tp49zErBKSXX3ygcv8YCALAqLz3CFyCEt'],
     httpEndpoint: 'http://127.0.0.1:8888'
@@ -42,7 +41,8 @@ describe('Todo Smoke Tests', () => {
 
     // TODO: Look at GITHUB code to figure out how the dude did it. https://github.com/eosasia/eos-todo/
     it('should be able to READ a todo', async() => {
-        throw "NOT IMPLEMENTED"
+        const result = await eos.getTableRows(true, 'todo', 'todo', 'todos');
+        expect(result.rows).to.be.an('array');
     });
 
     async function createTodo() {
@@ -52,13 +52,11 @@ describe('Todo Smoke Tests', () => {
     }
 
     async function destroyTodo(todoId) {
-        const response = await contract.destroy('serg', todoId, options);
-        return response;
+        return await contract.destroy('serg', todoId, options);
     }
 
     async function completeTodo(todoId) {
-        const response = await contract.complete('serg', todoId, options);
-        return response;
+        return await contract.complete('serg', todoId, options);
     }
 
 
