@@ -24,7 +24,7 @@ public:
         auto todo_lookup = todos.find(id);
         todos.erase(todo_lookup);
 
-        eosio::print("todo#", id, " destroyed");
+        eosio::print("todo#", id, " destroyed yo");
     }
 
     // @abi action

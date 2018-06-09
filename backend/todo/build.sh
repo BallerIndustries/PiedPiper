@@ -9,7 +9,7 @@ $cleos wallet unlock --password PW5JnHFdSymgWr7dGGq32zSJNuD1uXEARXExN4JdGh1ao1YT
 cp todo.cpp /tmp/work/todo/todo.cpp
 
 # Compile the code
-$eosiocpp -o /work/todo/todo.wasm /work/todo/todo.cpp
+$eosiocpp -o /work/todo/todo.wast /work/todo/todo.cpp
 $eosiocpp -g /work/todo/todo.abi /work/todo/todo.cpp
 
 # Upload the WASM contract
