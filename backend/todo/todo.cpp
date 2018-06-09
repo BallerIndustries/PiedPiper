@@ -36,7 +36,7 @@ public:
             modifiable_todo.completed = 1;
         });
 
-        eosio::print("todo#", id, " marked as complete");
+        eosio::print("todo#", id, " marked as complete you fucker");
     }
 
 private:

@@ -16,6 +16,6 @@ cleos wallet import 5JE3me45HErQh2qDAoVeoj3TH8pLVajEkGNtBUaZk4mhX3sATU4
 cleos create account eosio todo PUBLICKEY1 PUBLICKEY2
 # cleos create account eosio todo EOS7kCe1oNbCzRE1fcPgNHwTaezmSypmGdTf2kPVS5wQREjSmA5Ro EOS6hqnZETUaDkmHS74XcphRte8BWU76svrec3xCCXkBueqfCSDs8
 
-eosiocpp -o /work/todo/todo.wast /work/todo/todo.cpp
+eosiocpp -o /work/todo/todo.wasm /work/todo/todo.cpp
 eosiocpp -g /work/todo/todo.abi /work/todo/todo.cpp
 cleos set contract todo /work/todo -p todo
