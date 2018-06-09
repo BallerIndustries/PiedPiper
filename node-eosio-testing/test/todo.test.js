@@ -32,7 +32,12 @@ describe('Todo Smoke Tests', () => {
     });
 
     it('should be able to CREATE and then COMPLETE a todo', async() => {
-        throw "NOT IMPLEMENTED"
+        const result = await createTodo();
+        const todoId = result.todoId;
+
+        // COMPLETE
+        const response = await completeTodo(todoId);
+        expect(response).to.exist;
     });
 
     // TODO: Look at GITHUB code to figure out how the dude did it. https://github.com/eosasia/eos-todo/
@@ -50,6 +55,12 @@ describe('Todo Smoke Tests', () => {
         const response = await contract.destroy('serg', todoId, options);
         return response;
     }
+
+    async function completeTodo(todoId) {
+        const response = await contract.complete('serg', todoId, options);
+        return response;
+    }
+
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
