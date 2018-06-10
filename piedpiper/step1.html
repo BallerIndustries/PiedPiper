@@ -1,0 +1,76 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-sm-4 sidebar1">
+                <div class="logo">
+                    <!-- <img src="http://lorempixel.com/output/people-q-g-64-64-1.jpg" class="img-responsive center-block" alt="Logo"> -->
+                    <img src="img/logo.png">
+                </div>
+                <br>
+                <div class="left-navigation">
+                    <ul class="list">
+                        <li class="active"><a href="step1.html"><img src="img/industry.png">
+                            <br>Industry
+                        </a></li>
+                        <li><a href="step2.html"><img src="img/usecase.png">
+                            <br>Use Case
+                        </a></li>
+                        <li><a href="step3.html"><img src="img/connectapp.png">
+                            <br>Connect SaaS
+                        </a></li>
+                        <li><a href="step4.html"><img src="img/customize.png">
+                            <br>Customize
+                        </a></li>
+                        <li><a href="step5.html"><img src="img/publish.png">
+                            <br>Publish
+                        </a></li>
+                        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAABCAQAAAA22DU5AAAADklEQVR42mP8X89AcwAAlYMBgF+GjogAAAAASUVORK5CYII="></li>
+                        <li><img src="img/setting.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-content">
+                <!--Main content code to be written here -->
+                <h1>Pick an industry to get started</h1>
+                <h3>You can always change this later. You can customize features to any template.</h3>
+                <hr>
+                <div class="flex-container">
+                    <div><img class="icon" src="img/photo1.jpg">
+                        <br><span class="caption">Food & Beverage</span></div>
+                    <div><img class="icon" src="img/photo2.jpg">
+                        <br><span class="caption">Hospitality</span></div>
+                    <div><img class="icon" src="img/photo3.jpg">
+                        <br><span class="caption">Transportation</span></div>
+                </div>
+                <div class="flex-container">
+                    <div><img class="icon" src="img/photo4.jpg">
+                        <br><span class="caption">Travel</span></div>
+                    <div><img class="icon" src="img/photo5.jpg">
+                        <br><span class="caption">E-commerce</span></div>
+                    <div><img class="icon" src="img/photo5.jpg">
+                        <br><span class="caption">E-commerce</span></div>
+                </div>
+                <div class="center">
+                    <button class="btn btn-primary" onclick="location.href='step2.html' ; ">Step 2</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function() {
+        $('.flex-container span').click(function() {
+            var a = $(this).text();
+            alert('You have chosen ' + a);
+            $('.flex-container').css({ opacity: 1 });
+        });
+        
+    });
+    </script>
+</body>
