@@ -21,7 +21,7 @@ class addressbook : public eosio::contract {
            p.fullname = fullname;
            p.age = age;
         });
-      } 
+      }
 
   private: 
     // Setup the struct that represents the row in the table

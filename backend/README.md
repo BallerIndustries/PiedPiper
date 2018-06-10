@@ -2,6 +2,12 @@ https://eosglobalhackathon.slack.com/files/UAZNKLZR9/FB5ERMS78/hackathon_howto.m
 
 default wallet password: PW5KkbpP9K19pAkH7d3jdz7JB3scgowpeDmbLmVjpXQbi2acaVUTK
 
+Unlock Wallet
+--------------------
+cleos wallet open
+cleos wallet unlock --password PW5KkbpP9K19pAkH7d3jdz7JB3scgowpeDmbLmVjpXQbi2acaVUTK
+
+
 Active Key
 --------------------
 Private key: 5KVwjQZ9MKfSCr8yinM1N5xvF3yJ84mRLWuGkCw1hFNiP1U14CT
@@ -37,5 +43,7 @@ Public key3: EOS4vjcRXiABU6YhqXeYqs8zu79F7FphAXLb8NCujEQHjoLs4s5jG
 
 Private key4: 5J5MqVyLR7kydSHQAt5qRbw5bWC32mtfcNansXUDxhH5x4RJf2z
 Public key4: EOS5zFH1HxuuC74Na9L3HEGrBMxKKpBrhn8wWG3mwrJgZYvm6rBDb
+
+
 
 
