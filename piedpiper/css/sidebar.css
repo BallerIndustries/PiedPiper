@@ -1,0 +1,143 @@
+body {
+    font-family: 'Montserrat';
+}
+
+.sidebar1 {
+    background: #113B47;
+    padding: 0px;
+    min-height: 100%;
+}
+
+.active {
+    background-color: #57BD86;
+}
+
+.list {
+    color: #fff;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.list>li {
+    text-align: center;
+    text-decoration: none;
+}
+
+.list a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.list::first-line {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.list>li,
+h5 {
+    text-align: center;
+    padding: 20px;
+}
+
+.list>li:hover {
+    background-color: #57BD86;
+    color: white;
+}
+
+.main-content {
+    padding: 10px 10px 10px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container>div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.icon {
+    width: 150px;
+    height: 100px;
+}
+
+.usecase {
+    width: 150px;
+    height: 200px;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    padding: 3px;
+}
+
+.caption {
+    font-size: 16px;
+    height: 100px;
+}
+
+.flex-container>div:hover {
+    opacity: 1;
+}
+
+.fade {
+    opacity: 1;
+}
+
+.flex-container>div {
+    opacity: 0.7;
+}
+
+.center {
+    text-align: center;
+}
+
+.reward {
+    display: none;
+}
+
+.giftcard {
+    display: none;
+}
+
+.game {
+    display: none;
+}
+
+.usecase:hover .reward,
+.usecase:hover .giftcard,
+.usecase:hover .game {
+    display: block;
+    position: relative;
+    top: 100px;
+}
+
+.step3 {
+    width: 60%;
+    height: 60%;
+}
+
+.step4 {
+    width: 60%;
+    height: 70%;
+}
+
+.btnn {
+    position: relative;
+    top: 100px;
+}
+
+.loading {
+    display: none;
+}
